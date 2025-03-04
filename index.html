@@ -1,175 +1,158 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Karthik Kasiralla</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Background Image CSS directly applied to body */
-			body {
-				background-image: url('https://cdn.pixabay.com/photo/2023/01/08/05/52/mountain-7704597_1280.jpg');
-				background-size: cover;
-				background-position: center;
-				background-attachment: fixed;
-				margin: 0;
-				padding: 0;
-				font-family: Arial, sans-serif;
-			}
-			h2 {
-    text-transform: none; /* Prevents the text from showing in all caps */
-}
+<head>
+    <title>Karthik Kasiralla</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Background Image */
+        body {
+            background-image: url('https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9530.jpg?t=st=1741061884~exp=1741065484~hmac=116d38b72e68838928defe23bf540944737e73d2326ea4941e4aab31190bdd1f&w=1480');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-			/* Semi-transparent overlay */
-			#bg-overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.5);  /* Adjust the opacity here */
-				z-index: -1;  /* Make sure it's behind content */
-			}
+        /* Hide all sections initially */
+        article {
+            display: none;
+        }
 
-			#wrapper {
-				position: relative;
-				z-index: 1;
-			}
-			/* Remove border around images */
-			/* Remove border and outline around images */
-img {
-    border: none;
-    outline: none;
-}
-/* Remove outline around links */
-a:focus {
-    outline: none;
-}
+        /* Show the first section by default */
+        #intro {
+            display: block;
+        }
 
+        /* Navigation styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
 
-			/* Reduce size of images in subsections */
-			article img {
-				width: 120%; /* Adjust the percentage to change the size */
-				max-width: 500px; /* Set a max-width to prevent the image from getting too large */
-				height: auto; /* Maintain the aspect ratio */
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-			<!-- Background Overlay -->
-			<div id="bg-overlay"></div>
+        /* Remove border and outline around images */
+        img {
+            border: none;
+            outline: none;
+        }
 
-			<!-- Header -->
-			<header id="header">
-				<div class="logo">
-					<span class="icon fa-gem"></span>
-				</div>
-				<div class="content">
-					<div class="inner">
-						<h1>Karthik Kasiralla</h1>
-						<p>Welcome to my portfolio! I’m an MCA graduate and a passionate Java Full Stack Developer.</p>
-					</div>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#Projects">Projects</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
+        /* Section images */
+        article img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
 
-			<!-- Main -->
-			<div id="main">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-				<!-- Intro -->
-				<article id="intro">
-					<h2 class="major">Intro</h2>
-					<span class="image main"><img src="c:\Users\Karth\Pictures\hello.jpg" alt="" /></span>
-					<p>Hey there! I'm Karthik, a Java Full Stack Developer with a knack for crafting intuitive, high-performance web applications. With an MCA background and a deep passion for technology, I've dived into the world of full-stack development, mastering everything from server-side logic to engaging user interfaces.</p>
-					<p>One of my proudest achievements is building a Swiggy app clone—a project that showcases my skills in Java, Hibernate, Spring Boot, and frontend technologies like JSP and JavaScript. It's not just about writing code for me; it's about creating experiences that users love.</p>
-					<p>I'm constantly exploring the latest tech trends and expanding my skill set, with a goal to solve real-world problems through innovative, scalable solutions. If you're looking for a developer who's driven, detail-oriented, and loves bringing ideas to life, let's connect!</p>
-				</article>
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="icon fa-gem"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Karthik Kasiralla</h1>
+                    <p>Welcome to my portfolio! I’m an MCA graduate and a passionate Java Full Stack Developer.</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a onclick="showSection('intro')">Intro</a></li>
+                    <li><a onclick="showSection('Projects')">Projects</a></li>
+                    <li><a onclick="showSection('about')">About</a></li>
+                    <li><a onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-				<!-- Work -->
-				<article id="Projects">
-					<h2 class="major">Projects</h2>
-					<span class="image main"><img src="c:\Users\Karth\Pictures\projects.jpg" alt="" /></span>
-					<p>As a Java Full Stack Web Developer, I’ve built several projects that demonstrate my skills in backend and frontend development. My Swiggy app clone replicates key features of the popular food delivery platform, including user authentication, dynamic restaurant and menu management with Hibernate, and cart/order management, all with a responsive frontend built using HTML, CSS, and JavaScript.</p>
-					<p>I’ve also worked on Python projects like a Rock Paper Scissors game and a Password Generator, showcasing my ability to create interactive applications in Python.</p>
-					<p>To see my work, visit my <a href="https://github.com/Karthikkasiralla" target="_blank">GitHub</a>.</p>
-				</article>
+        <!-- Main Content -->
+        <div id="main">
 
-				<!-- About -->
-				<article id="about">
-					<h2 class="major">Get to Know Me</h2>
-					<span class="image main"><img src="https://t4.ftcdn.net/jpg/00/94/88/19/360_F_94881945_nhV1LG78QOf0FR6SEbmEuiuzvQQi3c7h.jpg" alt="" /></span>
-					<p>I’m Karthik, a Full Stack Web Developer with a passion for creating dynamic, scalable, and responsive web applications. My technical expertise includes:</p>
-					<ul>
-						<li><strong>Programming Languages:</strong> Java, Python</li>
-						<li><strong>Frontend Technologies:</strong> HTML, CSS, JavaScript, JSP, Thymeleaf</li>
-						<li><strong>Backend Frameworks & Tools:</strong> Spring Boot, Hibernate</li>
-						<li><strong>Databases:</strong> MySQL, Oracle</li>
-						<li><strong>Version Control:</strong> Git</li>
-						<li><strong>Other Tools:</strong> Maven</li>
-					</ul>
-					<p>I specialize in backend and frontend development, using modern technologies to build functional and user-friendly applications. I’ve worked on projects like a <strong>Swiggy app clone</strong>, where I integrated various backend systems like user authentication, restaurant management, and order processing, along with a responsive frontend. Additionally, I’ve created Python projects such as a <strong>Rock Paper Scissors game</strong> and a <strong>Password Generator</strong>.</p>
-					<p>I’m deeply passionate about technology and always eager to learn and explore new frameworks and tools. Outside of coding, I enjoy watching movies in my free time, which helps me relax and stay inspired.</p>
-				</article>
+            <!-- Intro Section -->
+            <article id="intro">
+                <h2 class="major">Intro</h2>
+                <img src="https://img.freepik.com/free-vector/v813-aew-05_53876-166405.jpg?t=st=1741058727~exp=1741062327~hmac=80beca68db683cee5252474d934c91487a0998a1ab5ba1b99f59cc2668d65511&w=1380" alt="" />
+                <p>Hey there! I'm Karthik, a Java Full Stack Developer with a knack for crafting high-performance web applications.</p>
+            </article>
 
-				<!-- Contact -->
-				<article id="contact">
-					<h2 class="major">Contact</h2>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="4"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
-					<ul class="icons">
-						<li><a href="https://x.com/karthik06098171?s=21" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.instagram.com/karthik_k009" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/Karthikkasiralla" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					</ul>
-				</article>
+            <!-- Projects Section -->
+            <article id="Projects">
+                <h2 class="major">Projects</h2>
+                <img src="c:\Users\Karth\Pictures\projects.jpg" alt="Projects Image" />
+                <p>Check out my work on <a href="https://github.com/Karthikkasiralla" target="_blank">GitHub</a>.</p>
+            </article>
 
-			</div>
+            <!-- About Section -->
+            <article id="about">
+                <h2 class="major">About Me</h2>
+                <img src="https://t4.ftcdn.net/jpg/00/94/88/19/360_F_94881945_nhV1LG78QOf0FR6SEbmEuiuzvQQi3c7h.jpg" alt="About Image" />
+                <p>I’m Karthik, a Full Stack Developer skilled in Java, Hibernate, Spring Boot, MySQL, and frontend technologies.</p>
+            </article>
 
-			<!-- Footer -->
-			<footer id="footer">
-			</footer>
+            <!-- Contact Section -->
+            <article id="contact">
+                <h2 class="major">Contact</h2>
+                <form method="post" action="https://formspree.io/f/xbldnbqa">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </form>
+            </article>
 
-		</div>
+        </div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+    </div>
 
-	</body>
+    <!-- JavaScript to Handle Section Navigation -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            let sections = document.querySelectorAll("article");
+            sections.forEach(section => section.style.display = "none");
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+
+</body>
 </html>
